@@ -1,9 +1,8 @@
-
 [
   {
     "kind": "column",
-    "name": "OpenAI (Assistants)",
-    "description": "Create, modify and run OpenAI Assistants.",
+    "name": "Generate OpenAI Speech",
+    "description": "Convert text into speech using OpenAI's TTS API, with optional response format and speed.",
     "author": "Gavin Horne <gavin@thinknetwork.com.au>",
     "params": [
       {
@@ -12,19 +11,29 @@
         "type": "string"
       },
       {
-        "name": "endpoint",
-        "displayName": "API Endpoint (Required)",
+        "name": "model",
+        "displayName": "Model (Required)",
         "type": "string"
       },
       {
-        "name": "body",
-        "displayName": "Body (JSON Schema Required)",
+        "name": "input",
+        "displayName": "Input Text (Required)",
         "type": "string"
       },
       {
-        "name": "json",
-        "displayName": "JSON Schema (Output)",
+        "name": "voice",
+        "displayName": "Voice (Required)",
         "type": "string"
+      },
+      {
+        "name": "response_format",
+        "displayName": "Response Format (Optional, mp3/wav/ogg)",
+        "type": "string"
+      },
+      {
+        "name": "speed",
+        "displayName": "Speed (Optional, 0.25 to 4.0)",
+        "type": "number"
       }
     ],
     "result": {
